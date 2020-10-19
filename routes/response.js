@@ -1,18 +1,34 @@
 const router = require('express').Router();
 let Response = require('../models/responses.model');
 
-router.route('/saveResponse').post((req, res) => {
-    console.log(req.body);
-    const name = req.body.name;
-    const situationType = req.body.situationType;
-    const opponentType = req.body.opponentType;
-    const doesCooperation = req.body.doesCooperation;
-    
-    const newResponse = new Response({ name, situationType, opponentType, doesCooperation });
+documentId = {
+    0: "5f8ddd2f453a0800046e658e",      // original case
+    1: "5f8de5e6d9ffdbfb4478d636",      // reduced punishment
+    2: "5f8de60bd9ffdbfb4478d637",      // increased punishment
+    3: "5f8de61cd9ffdbfb4478d638"       // cooperation favoured
+}
 
-    newResponse.save()
-    .then(() => res.status(200).send("success"))
-    .catch(err => res.status(400).send(err))
+router.route('/saveResponse').post((req, res) => {
+
+    Response.findById(documentId[Number(req.body.type)])
+        .then(data => {
+            if (req.body.cooperatesWhenIntelligentAgent) {
+                data['cooperationsIntelligent'] += 1;
+            } else {
+                data['defectionsIntelligent'] += 1;
+            }
+
+            if (req.body.cooperatesWhenNotIntelligentAgent) {
+                data['cooperationsNotIntelligent'] += 1;
+            } else {
+                data['defectionsNotIntelligent'] += 1;
+            }
+
+            Response.findByIdAndUpdate(documentId[Number(req.body.type)], data)
+                .then(() => res.status(200).send("success"))
+                .catch(err => res.status(400).send(err));
+        })
+        .catch(err => res.status(400).send(err));
 })
 
 module.exports = router;

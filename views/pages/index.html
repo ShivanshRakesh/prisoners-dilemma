@@ -12,15 +12,18 @@
 
 <body>
     <h1>Welcome to Prisioner's Dilemma!</h1>
-    <button onclick="test()">Click</button>
+    <button onclick="test(0)">Click0</button>
+    <button onclick="test(1)">Click1</button>
+    <button onclick="test(2)">Click2</button>
+    <button onclick="test(3)">Click3</button>
 
     <script>
-        function test() {
+        function test(num) {
             const data = {
                 'name': "something",
-                'situationType': 2,
-                'opponentType': 3,
-                'doesCooperation': false
+                'type': num,
+                'cooperatesWhenIntelligentAgent': true,
+                'cooperatesWhenNotIntelligentAgent': true
             };
             axios.post("/response/saveResponse", data).then(res => console.log(res));
         }
