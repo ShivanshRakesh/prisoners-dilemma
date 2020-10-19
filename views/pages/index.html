@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prisioner's Dilemma | ShivanshRakesh</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <h1>Welcome to Prisioner's Dilemma!</h1>
+    <button onclick="test()">Click</button>
+
+    <script>
+        function test() {
+            const data = {
+                'name': "something",
+                'situationType': 2,
+                'opponentType': 3,
+                'doesCooperation': false
+            };
+            axios.post("/response/saveResponse", data).then(res => console.log(res));
+        }
+    </script>
+</body>
+
+</html>
