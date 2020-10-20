@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prisioner's Dilemma | ShivanshRakesh</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/survey.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div id="prompt1" class="section mx-auto">
+            <h3 class="heading">Hey! Welcome to the survey! So you will be given 4 situations based on a common
+                scenario. For each situation, there will be 2 questions, which you need to answer.<br /><br />That's
+                all!
+                Simple, right?</h3>
+            <br />
+            <h1 class="question display-5">So let's get started!</h1>
+        </div>
+
+        <div id="prompt2" class="section mx-auto">
+            <h1 class="question">Okay, so here is the base scenario.</h1>
+            <div class="prompt">
+                You and your friend are members of a criminal gang. You both are arrested and imprisoned. Both of you
+                are in solitary confinement
+                which means you can't talk to your friend. The prosecutors lack sufficient evidence to convict you both
+                on the principal charge, but they hope to get both of you sentenced to a year in prison on a lesser
+                charge.
+                The prosecutors offer you a bargain. Both of you are given two options:
+                <br /><br />
+                Either <span style="color:#f8b467">betray</span> the other by testifying that the other committed the crime.
+                <br /><br />
+                Or <span style="color:#f8b467">cooperate</span> with the other by remaining silent.
+                <br />
+                <br />
+                Note that you won't know what your friend will be choosing since you both can't talk.
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function start(inp) {
+            axios.post("/response/collectName", { name: inp })
+                .then(res => {
+                    console.log(res);
+                    window.location.href = "./page1.html";
+                })
+                .catch(err => alert("Some error occured. Please report it to me (Shivansh Rakesh) if possible :)"));
+        }
+    </script>
+
+    <!-- FULL SCREEN PAGES -->
+    <script src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js"></script>
+    <script> new fullpage('#fullpage'); </script>
+
+    <!-- BOOTSTRAP SCRIPTS -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</body>
+
+</html>

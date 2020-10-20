@@ -18,7 +18,7 @@
 <body>
     <div id="fullpage">
         <div id="intro-section" class="section">
-            <p id="intro" class="heading_custom">A simulation of</p>
+            <p id="intro" class="heading_custom">A modified simulation of</p>
             <div id="main-heading" class="display-1">PRISIONER'S DILEMMA</div>
             <br />
             <p id="intro-footer">Made with <span style="color: red">&hearts;</span> by Shivansh Rakesh.</p>
@@ -30,7 +30,8 @@
                 <input id="name-inp" type="text" class="form-control shadow-lg" aria-label="Large"
                     aria-describedby="inputGroup-sizing-sm">
                 <div class="input-group-append">
-                    <button class="btn btn-success shadow-lg" onclick="start(document.getElementById('name-inp').value)" type="button">&nbsp;&nbsp;Start&nbsp;&nbsp;</button>
+                    <button class="btn btn-success shadow-lg" onclick="start(document.getElementById('name-inp').value)"
+                        type="button">&nbsp;&nbsp;Start&nbsp;&nbsp;</button>
                 </div>
             </div>
             <p style="color: rgb(180, 142, 163)">Don't worry, your answers will still be anonymous :P</p>
@@ -38,8 +39,14 @@
     </div>
 
     <script>
-        function start(inp){
-            axios.post("/response/collectName", {name: inp}).then(res => console.log(res));
+        function start(inp) {
+            // window.location.href = "/survey/page1.html"; // TESTING
+            axios.post("/response/collectName", { name: inp })
+                .then(res => {
+                    console.log(res);
+                    window.location.href = "/survey/page1.html";
+                })
+                .catch(err => alert("Some error occured. Please report it to me (Shivansh Rakesh) if possible :)"));
         }
     </script>
 
