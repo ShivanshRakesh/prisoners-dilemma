@@ -10,16 +10,20 @@ documentId = {
 }
 
 router.route('/collectName').post((req, res) => {
-    console.log("Adding name " + req.body.name + " to the collection...");
-    Response.findById(documentId['names'])
-        .then(data => {
-            data['names'].push(req.body.name);
-            
-            Response.findByIdAndUpdate(documentId['names'], data)
-                .then(() => res.status(200).send("success"))
-                .catch(err => res.status(400).send(err));
-        })
-        .catch(err => res.status(400).send(err));
+    if (req.body.name.length > 0 && req.body.name.trim()) {
+        console.log("Adding name " + req.body.name + " to the collection...");
+        Response.findById(documentId['names'])
+            .then(data => {
+                data['names'].push(req.body.name);
+
+                Response.findByIdAndUpdate(documentId['names'], data)
+                    .then(() => res.status(200).send("success"))
+                    .catch(err => res.status(400).send(err));
+            })
+            .catch(err => res.status(400).send(err));
+    } else {
+        res.status(200).send("empty input");
+    }
 })
 
 router.route('/saveResponse').post((req, res) => {
