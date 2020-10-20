@@ -41,7 +41,7 @@ body {
 .prompt {
 	font-family: 'PT Sans Narrow', sans-serif;
 	color: #f8b467;
-	line-height: 1.3em;
+	line-height: 1.2em;
 	text-align: justify;
 	color: white;
 }
@@ -66,6 +66,7 @@ body {
 	.section { max-width: 90%;}
 	.heading { font-size: 1.3rem; }
 	.question { font-size: 2rem;}
+	.prompt {font-size: 1.05rem; margin-bottom: 20px;}
 }
 
 @media (min-width: 544px) { 
