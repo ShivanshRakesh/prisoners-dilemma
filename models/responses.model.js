@@ -3,11 +3,12 @@ const Schema = mongoose.Schema;
 
 const responseSchema = new Schema({
     name: { type: String, required: false },
+    names: { type: Array, required: false },
     type: { type: Number, required: false },
-    cooperationsIntelligent: { type: Number, required: true },
-    cooperationsNotIntelligent: { type: Number, required: true },
-    defectionsIntelligent: { type: Number, required: true },
-    defectionsNotIntelligent: { type: Number, required: true }
+    cooperationsIntelligent: { type: Number, required: false },
+    cooperationsNotIntelligent: { type: Number, required: false },
+    defectionsIntelligent: { type: Number, required: false },
+    defectionsNotIntelligent: { type: Number, required: false }
 }, {
     timestamps: false,
 });

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prisioner's Dilemma | ShivanshRakesh</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../public/stylesheets/main.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div id="intro-section" class="section">
+            <p id="intro" class="heading_custom">A simulation of</p>
+            <div id="main-heading" class="display-1">PRISIONER'S DILEMMA</div>
+            <br />
+            <p id="intro-footer">Made with <span style="color: red">&hearts;</span> by Shivansh Rakesh.</p>
+        </div>
+        <div id="survey-section" class="section survey">
+            <h3 style="color: rgb(180, 142, 163)" class="heading my-0">Just to get started,</h3>
+            <h1 class="heading display-4 mx-auto">What is your name?</h1>
+            <div id="name-form" class="input-group mx-auto mt-4 mb-4">
+                <input id="name-inp" type="text" class="form-control shadow-lg" aria-label="Large"
+                    aria-describedby="inputGroup-sizing-sm">
+                <div class="input-group-append">
+                    <button class="btn btn-success shadow-lg" onclick="start(document.getElementById('name-inp').value)" type="button">&nbsp;&nbsp;Start&nbsp;&nbsp;</button>
+                </div>
+            </div>
+            <p style="color: rgb(180, 142, 163)">Don't worry, your answers will still be anonymous :P</p>
+        </div>
+    </div>
+
+    <script>
+        function start(name){
+            axios.post("/response/collectName", {name: this.name}).then(res => console.log(res));
+        }
+    </script>
+
+    <!-- FULL SCREEN PAGES -->
+    <script src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js"></script>
+    <script> new fullpage('#fullpage'); </script>
+
+    <!-- BOOTSTRAP SCRIPTS -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</body>
+
+</html>

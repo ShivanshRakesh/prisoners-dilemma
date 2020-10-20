@@ -1,30 +1,96 @@
-.jumbotron {
-  background: #532F8C;
-  color: white;
-  padding-bottom: 80px; }
-  .jumbotron .btn-primary {
-    background: #845ac7;
-    border-color: #845ac7; }
-    .jumbotron .btn-primary:hover {
-      background: #7646c1; }
-  .jumbotron p {
-    color: #d9ccee;
-    max-width: 75%;
-    margin: 1em auto 2em; }
-  .navbar + .jumbotron {
-    margin-top: -20px; }
-  .jumbotron .lang-logo {
-    display: block;
-    background: #B01302;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    border: 2px solid white; }
-    .jumbotron .lang-logo img {
-      max-width: 100%; }
+.section {
+	text-align: center;
+	color: white;
+	font-weight: 400;
+	border: 0px transparent solid;
+	margin: 0;
+	padding: 0;
+}
 
-h1 {
-  color: blue;
+#intro-section {
+	background-image: linear-gradient(0deg, rgb(43, 3, 24), #1f0535);
+	/* background-image: linear-gradient(-5deg, rgb(29, 1, 16), rgb(104, 16, 78)); */
+	/* background-image: linear-gradient(0deg, rgb(36, 4, 15), rgb(129, 10, 66)); */
+}
+
+#intro {
+	font-size: 3vw;
+	line-height: 1em;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+}
+
+#main-heading {
+	font-size: large;
+	color: #ffc400;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	font-size: 13vw;
+	line-height: 1.1em;
+	/* font-size: calc(max(10vw, 80px)); */
+	/* background-color: #1e0d3b; */
+}
+
+#intro-footer {
+	bottom: 0;
+}
+
+#intro-section::before {
+	animation: bounce 1.75s cubic-bezier(.56,.08,.48,.9) infinite;
+	/* animation: bounce 1.75s ease-in-out infinite; */
+	bottom: 2rem;
+	color: #fff;
+	content: '╲╱';
+	font-size: 1.4rem;
+	height: 4rem;
+	left: 50%;
+	letter-spacing: -1px;
+	line-height: 4rem;
+	margin-left: -3rem;
+	opacity: 0.8;
+	position: absolute;
+	text-align: center;
+	width: 6rem;
+}
+
+.survey .heading {
+	font-family: 'Neucha', cursive;
+}
+
+#survey-section h1 {
+	max-width: 80%;
+}
+
+#survey-section {
+	background-image: linear-gradient(180deg, rgb(43, 3, 24), rgb(19, 0, 10));
+	/* background-image: linear-gradient(-5deg, rgb(29, 1, 16), rgb(104, 16, 78)); */
+	/* background-image: linear-gradient(0deg, rgb(36, 4, 15), rgb(129, 10, 66)); */
+}
+
+#name-form {
+	width: calc(min(400px, 80%))
+}
+  
+@keyframes bounce {
+	50% {
+	  	transform: translateY(-50%);
+	}
+}
+
+@media (max-width: 543px) {  
+	#intro { font-size: 6vw; }
+	#main-heading {font-size: 16vw;}
+	#intro-footer { font-size: 4vw; }
+}
+
+@media (min-width: 544px) { 
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) { 
+}
+
+@media (min-width: 1200px) {  
 }
