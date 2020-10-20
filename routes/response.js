@@ -10,11 +10,12 @@ documentId = {
 }
 
 router.route('/collectName').post((req, res) => {
-    Response.findById(documentId['name'])
+    console.log("Adding name " + req.body.name + " to the collection...");
+    Response.findById(documentId['names'])
         .then(data => {
-            data['names'].push([req.body.name]);
+            data['names'].push(req.body.name);
             
-            Response.findByIdAndUpdate(documentId['name'], data)
+            Response.findByIdAndUpdate(documentId['names'], data)
                 .then(() => res.status(200).send("success"))
                 .catch(err => res.status(400).send(err));
         })

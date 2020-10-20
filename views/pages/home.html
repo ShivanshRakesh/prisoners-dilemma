@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.css" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../../public/stylesheets/main.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
@@ -38,8 +38,8 @@
     </div>
 
     <script>
-        function start(name){
-            axios.post("/response/collectName", {name: this.name}).then(res => console.log(res));
+        function start(inp){
+            axios.post("/response/collectName", {name: inp}).then(res => console.log(res));
         }
     </script>
 
