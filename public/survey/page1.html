@@ -36,11 +36,14 @@
             <h1 class="question">Okay, so here is the base scenario.</h1>
             <div class="prompt">
                 <p>
-                    You are member of a criminal gang. You and an other person from the gang are arrested as suspects for a crime. Both of
-                    you are in solitary confinement which means you can't talk to each other. The prosecutors lack sufficient evidence to convict
+                    You are member of a criminal gang. You and an other person from the gang are arrested as suspects
+                    for a crime. Both of
+                    you are in solitary confinement which means you can't talk to each other. The prosecutors lack
+                    sufficient evidence to convict
                     on the principal charge, but they hope to get both of you sentenced to a year in prison on a lesser
                     charge.
-                    The prosecutors offer you two a bargain, which will be described later. Both of you have 2 options for each such offer:
+                    The prosecutors offer you two a bargain, which will be described later. Both of you have 2 options
+                    for each such offer:
                 </p>
                 <p>Either <span style="color:#f8b467">betray</span> the other by testifying that the other committed the
                     crime.</p>
@@ -51,43 +54,133 @@
                 <br />
             </div>
         </div>
+
+        <!-- SITUATION-1 -->
         <div id="prompt3" class="section mx-auto">
             <h1 class="question">Situation ONE.</h1>
             <div class="prompt">
-                <p>
-                    ThisIf A and B each betray the other, each of them serves 2 years in prison
-If A betrays B but B remains silent, A will be set free and B will serve 3 years in prison (and vice versa)
-If A and B both remain silent, both of them will only serve 1 year in prison (on the lesser charge)
-                </p>
-                <p>Either <span style="color:#f8b467">betray</span> the other by testifying that the other committed the
-                    crime.</p>
-                <p>Or <span style="color:#f8b467">cooperate</span> with the other by remaining silent.</p>
-                <p>Note that you won't know what your friend will be choosing since you both can't talk.</p>
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <p>You are given the following offer:</p>
+                        <p>If you both cooperate, you both go to prison
+                            for <span style="color:#f8b467">1
+                                year</span> (on the lesser charge).</p>
+                        <p>If you betray and the other cooperates, the
+                            other
+                            person will be going to prison for <span style="color:#f8b467">3 years</span>, and you will
+                            be <span style="color:#f8b467">set free</span> (and vice-versa).</p>
+                        <p>If you both betray each other, you both go to
+                            prison for <span style="color:#f8b467">2 years</span>.</p>
+                    </div>
+                    <div class="col-lg-5 pl-3">
+                        <img width="100%" class="mx-auto my-auto" src="/images/case1.png">
+                    </div>
+                </div>
                 <br />
                 <br />
                 <br />
             </div>
         </div>
 
-        <script>
-            function start(inp) {
-                axios.post("/response/collectName", { name: inp })
-                    .then(res => {
-                        console.log(res);
-                        window.location.href = "./page1.html";
-                    })
-                    .catch(err => alert("Some error occured. Please report it to me (Shivansh Rakesh) if possible :)"));
-            }
-        </script>
+        <!-- SITUATION-2 -->
+        <div id="prompt4" class="section mx-auto">
+            <h1 class="question">Situation TWO.</h1>
+            <div class="prompt">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <p>You are given the following offer:</p>
+                        <p>If you both cooperate, you both go to prison
+                            for <span style="color:#f8b467">1
+                                month</span> (on the lesser charge).</p>
+                        <p>If you betray and the other cooperates, the
+                            other
+                            person will be going to prison for <span style="color:#f8b467">5 months</span>, and you will
+                            be <span style="color:#f8b467">set free</span> (and vice-versa).</p>
+                        <p>If you both betray each other, you both go to
+                            prison for <span style="color:#f8b467">2 years</span>.</p>
+                    </div>
+                    <div class="col-lg-5 pl-3">
+                        <img width="100%" class="mx-auto my-auto" src="/images/case2.png">
+                    </div>
+                </div>
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
 
-        <!-- FULL SCREEN PAGES -->
-        <script src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js"></script>
-        <script> new fullpage('#fullpage'); </script>
+        <!-- SITUATION-3 -->
+        <div id="prompt5" class="section mx-auto">
+            <h1 class="question">Situation THREE.</h1>
+            <div class="prompt">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <p>You are given the following offer:</p>
+                        <p>If you both cooperate, you both would be <span style="color:#f8b467">set
+                                free</span>.</p>
+                        <p>If you betray and the other cooperates, the
+                            other
+                            person will be going to prison for <span style="color:#f8b467">3 years</span>, and you will
+                            be going to prison for <span style="color:#f8b467">1 year</span> (and
+                            vice-versa).</p>
+                        <p>If you both betray each other, you both go to
+                            prison for <span style="color:#f8b467">3 years</span>.</p>
+                    </div>
+                    <div class="col-lg-5 pl-3">
+                        <img width="100%" class="mx-auto my-auto" src="/images/case3.png">
+                    </div>
+                </div>
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
 
-        <!-- BOOTSTRAP SCRIPTS -->
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
-        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+        <!-- SITUATION-4 -->
+        <div id="prompt6" class="section mx-auto">
+            <h1 class="question">Situation FOUR.</h1>
+            <div class="prompt">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <p>You are given the following offer:</p>
+                        <p>If you both cooperate, you both would be <span style="color:#f8b467">set
+                                free</span>.</p>
+                        <p>If one of you betrays and the other cooperates, <span style="color:#f8b467">the police
+                                decides on what to do</span>.</p>
+                        <p>If you both betray each other, you both go to
+                            prison for <span style="color:#f8b467">2 years</span>.</p>
+                    </div>
+                    <div class="col-lg-5 pl-3">
+                        <img width="100%" class="mx-auto my-auto" src="/images/case4.png">
+                    </div>
+                </div>
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function start(inp) {
+            axios.post("/response/collectName", { name: inp })
+                .then(res => {
+                    console.log(res);
+                    window.location.href = "./page1.html";
+                })
+                .catch(err => alert("Some error occured. Please report it to me (Shivansh Rakesh) if possible :)"));
+        }
+    </script>
+    <!-- <span style="color:#f8b467">&CircleDot;</span> -->
+    <!-- FULL SCREEN PAGES -->
+    <script src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js"></script>
+    <script> new fullpage('#fullpage'); </script>
+
+    <!-- BOOTSTRAP SCRIPTS -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 </body>
 
 </html>
