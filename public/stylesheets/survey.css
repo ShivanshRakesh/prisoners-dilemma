@@ -65,7 +65,7 @@ body {
 @media (max-width: 543px) {  
 	.section { max-width: 90%;}
 	.heading { font-size: 1.3rem; }
-	.question { font-size: 2rem;}
+	.question { font-size: 1.8rem;}
 	.prompt {font-size: 1.05rem; margin-bottom: 20px;}
 }
 

@@ -35,45 +35,59 @@
         <div id="prompt2" class="section mx-auto">
             <h1 class="question">Okay, so here is the base scenario.</h1>
             <div class="prompt">
-                You and your friend are members of a criminal gang. You both are arrested and imprisoned. Both of you
-                are in solitary confinement
-                which means you can't talk to your friend. The prosecutors lack sufficient evidence to convict you both
-                on the principal charge, but they hope to get both of you sentenced to a year in prison on a lesser
-                charge.
-                The prosecutors offer you a bargain. Both of you are given two options:
-                <br /><br />
-                Either <span style="color:#f8b467">betray</span> the other by testifying that the other committed the crime.
-                <br /><br />
-                Or <span style="color:#f8b467">cooperate</span> with the other by remaining silent.
-                <br />
-                <br />
-                Note that you won't know what your friend will be choosing since you both can't talk.
+                <p>
+                    You are member of a criminal gang. You and an other person from the gang are arrested as suspects for a crime. Both of
+                    you are in solitary confinement which means you can't talk to each other. The prosecutors lack sufficient evidence to convict
+                    on the principal charge, but they hope to get both of you sentenced to a year in prison on a lesser
+                    charge.
+                    The prosecutors offer you two a bargain, which will be described later. Both of you have 2 options for each such offer:
+                </p>
+                <p>Either <span style="color:#f8b467">betray</span> the other by testifying that the other committed the
+                    crime.</p>
+                <p>Or <span style="color:#f8b467">cooperate</span> with the other by remaining silent.</p>
+                <p>Note that you won't know what the other will be choosing since you both can't talk.</p>
                 <br />
                 <br />
                 <br />
             </div>
         </div>
-    </div>
+        <div id="prompt3" class="section mx-auto">
+            <h1 class="question">Situation ONE.</h1>
+            <div class="prompt">
+                <p>
+                    ThisIf A and B each betray the other, each of them serves 2 years in prison
+If A betrays B but B remains silent, A will be set free and B will serve 3 years in prison (and vice versa)
+If A and B both remain silent, both of them will only serve 1 year in prison (on the lesser charge)
+                </p>
+                <p>Either <span style="color:#f8b467">betray</span> the other by testifying that the other committed the
+                    crime.</p>
+                <p>Or <span style="color:#f8b467">cooperate</span> with the other by remaining silent.</p>
+                <p>Note that you won't know what your friend will be choosing since you both can't talk.</p>
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
 
-    <script>
-        function start(inp) {
-            axios.post("/response/collectName", { name: inp })
-                .then(res => {
-                    console.log(res);
-                    window.location.href = "./page1.html";
-                })
-                .catch(err => alert("Some error occured. Please report it to me (Shivansh Rakesh) if possible :)"));
-        }
-    </script>
+        <script>
+            function start(inp) {
+                axios.post("/response/collectName", { name: inp })
+                    .then(res => {
+                        console.log(res);
+                        window.location.href = "./page1.html";
+                    })
+                    .catch(err => alert("Some error occured. Please report it to me (Shivansh Rakesh) if possible :)"));
+            }
+        </script>
 
-    <!-- FULL SCREEN PAGES -->
-    <script src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js"></script>
-    <script> new fullpage('#fullpage'); </script>
+        <!-- FULL SCREEN PAGES -->
+        <script src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js"></script>
+        <script> new fullpage('#fullpage'); </script>
 
-    <!-- BOOTSTRAP SCRIPTS -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+        <!-- BOOTSTRAP SCRIPTS -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 </body>
 
 </html>
