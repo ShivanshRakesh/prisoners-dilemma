@@ -1,7 +1,7 @@
 {
-  "name": "prisionersdilemma",
+  "name": "prisoner-dilemma",
   "version": "1.0.0",
-  "description": "Simulation of Prisioner's Dilemma",
+  "description": "Simulation of Prisoner's Dilemma",
   "engines": {
     "node": "12.x"
   },
@@ -17,10 +17,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ShivanshRakesh/prisioners-dilemma"
+    "url": "https://github.com/ShivanshRakesh/prisoners-dilemma"
   },
   "keywords": [
-    "prisionersdilemma",
+    "prisonersdilemma",
     "philosophy"
   ],
   "license": "MIT"

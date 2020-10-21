@@ -1,7 +1,7 @@
-# Prisioner's Dilemma
-A simulation of Prisioner's Dilemma for my Philosophy Project.
+# Prisoner's Dilemma
+A simulation of Prisoner's Dilemma for my Philosophy Project.
 
-Deployed at: https://prisionersdilemma.herokuapp.com
+Deployed at: https://prisoner-dilemma.herokuapp.com
 
 ### Author
 Shivansh Rakesh
