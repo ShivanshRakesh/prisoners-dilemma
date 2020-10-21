@@ -11,7 +11,7 @@ documentId = {
 
 router.route('/collectName').post((req, res) => {
     if (req.body.name.length > 0 && req.body.name.trim()) {
-        console.log("Adding name " + req.body.name + " to the collection...");
+        // console.log("Adding name " + req.body.name + " to the collection...");
         Response.findById(documentId['names'])
             .then(data => {
                 data['names'].push(req.body.name);
@@ -27,7 +27,7 @@ router.route('/collectName').post((req, res) => {
 })
 
 router.route('/saveResponse').post((req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     Response.findById(documentId[Number(req.body.type)])
         .then(data => {
             if (req.body.cooperatesWhenIntelligent == '1') {
