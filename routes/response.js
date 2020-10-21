@@ -27,7 +27,7 @@ router.route('/collectName').post((req, res) => {
 })
 
 router.route('/saveResponse').post((req, res) => {
-    // console.log(req.body);
+    console.log(req.body);
     Response.findById(documentId[Number(req.body.type)])
         .then(data => {
             if (req.body.cooperatesWhenIntelligent == '1') {
