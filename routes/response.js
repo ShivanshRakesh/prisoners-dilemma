@@ -27,18 +27,18 @@ router.route('/collectName').post((req, res) => {
 })
 
 router.route('/saveResponse').post((req, res) => {
-
+    // console.log(req.body);
     Response.findById(documentId[Number(req.body.type)])
         .then(data => {
-            if (req.body.cooperatesWhenIntelligentAgent) {
+            if (req.body.cooperatesWhenIntelligent == '1') {
                 data['cooperationsIntelligent'] += 1;
-            } else {
+            } else if (req.body.cooperatesWhenIntelligent == '0') {
                 data['defectionsIntelligent'] += 1;
             }
 
-            if (req.body.cooperatesWhenNotIntelligentAgent) {
+            if (req.body.cooperatesWhenNotIntelligent == '1') {
                 data['cooperationsNotIntelligent'] += 1;
-            } else {
+            } else if (req.body.cooperatesWhenNotIntelligent == '0') {
                 data['defectionsNotIntelligent'] += 1;
             }
 
