@@ -3,6 +3,8 @@ A modified simulation/survey of [Prisoner's Dilemma](https://en.wikipedia.org/wi
 
 Deployed at: https://prisoner-dilemma.herokuapp.com
 
+![](screenshot-min.png)
+
 ### Technologies Used
 - HTML, CSS, Javascript (Frontend)
 - Express.js
