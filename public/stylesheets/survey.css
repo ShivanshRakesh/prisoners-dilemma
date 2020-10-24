@@ -13,7 +13,7 @@ body {
 	/* background-image: linear-gradient(0deg, rgb(36, 4, 15), rgb(129, 10, 66)); */
 }
 
-.section::before {
+.scrolldown::before {
 	animation: bounce 1.25s cubic-bezier(.56,.08,.48,.9) infinite;
 	/* animation: bounce 1.75s ease-in-out infinite; */
 	bottom: 1.3rem;
