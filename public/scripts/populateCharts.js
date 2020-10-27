@@ -52,7 +52,7 @@ function populateCharts(resp) {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
-                        suggestedMax: 320
+                        suggestedMax: 460
                     }
                 }]
             }
@@ -91,7 +91,7 @@ function populateCharts(resp) {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
-                        suggestedMax: 320
+                        suggestedMax: 460
                     }
                 }]
             }
