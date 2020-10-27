@@ -1,0 +1,121 @@
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    overflow: auto;
+    height: 100%;
+}
+
+.footer {
+	text-align: right;
+	padding: 10px;
+	/* font-weight: 700; */
+	/* background-color: black; */
+	background-color: rgb(40, 40, 40);
+}
+
+.footer a {
+	/* color: rgb(110, 202, 255); */
+	color: white;
+	text-decoration: none;
+}
+
+
+body {
+	font-family: 'Markazi Text', serif;
+	font-family: 'Rubik', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Courier Prime', monospace;
+	background: url('/images/bg.png') repeat;
+	font-weight: 400;
+	color: rgb(25, 25, 25);
+	color: rgb(40, 40, 40);
+}
+
+.highlight {
+	color: rgb(91, 180, 253);
+	/* text-decoration: underline;
+	text-decoration-color: rgb(80, 80, 80);
+	text-decoration-thickness: 3px; */
+	/* text-decoration-style: wavy; */
+}
+
+.heading {
+	font-weight: 700;
+	/* color: rgb(248, 180, 103); */
+	line-height: 1.2em;
+}
+
+.prompt {
+	/* font-family: 'Times New Roman', Times, serif */
+	/* font-weight: 600; */
+	/* color: #f8b467; */
+	font-size: 1em;
+	line-height: 1.1em;
+	text-align: justify;
+	/* color: white; */
+}
+
+.prompt img {
+	margin-top: auto;
+	margin-bottom: auto;
+	border-radius: 5px;
+}
+
+.question {
+	/* font-family: 'Neucha', cursive; */
+	color: rgb(248, 180, 103);
+}
+
+.question-col {
+	/* display: table-cell; */
+	/* height: 100%;
+	width: 50%; */
+	border-left: 0.25px solid rgba(255, 255, 255, 0.2);
+	border-right: 0.25px solid rgba(255, 255, 255, 0.2);
+}
+
+.choice {
+	margin: auto;
+	width: 100%;
+	border-radius: 5px;
+	background-color: #f8b467;
+	/* font-weight: bold; */
+}
+
+.next {
+	width: 100%;
+	margin: auto;
+}
+  
+@keyframes bounce {
+	50% {
+	  	transform: translateY(-25%);
+	}
+}
+
+@media (max-width: 543px) {  
+	.big-heading { font-size: 1.25rem; }
+	/* .section { max-width: 95%;} */
+	.heading { font-size: 1.1rem; }
+	.prompt {font-size: 1rem; margin-bottom: 20px;}
+}
+
+@media (min-width: 544px) { 
+	/* .section { max-width: 90%; } */
+}
+
+@media (min-width: 768px) {
+	/* .section { max-width: 80%; } */
+	.prompt { font-size: 1.25rem; }
+}
+
+/* @media (min-width: 992px) { 
+	.section { max-width: 80%; }
+}
+
+@media (min-width: 1200px) {
+	.section { max-width: 80%; }
+} */

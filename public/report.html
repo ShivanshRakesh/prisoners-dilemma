@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prisoner's Dilemma | ShivanshRakesh</title>
+
+    <script>
+        let isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
+            navigator.userAgent &&
+            navigator.userAgent.indexOf('CriOS') == -1 &&
+            navigator.userAgent.indexOf('FxiOS') == -1;
+        if (isSafari) {
+            alert("You might face some issues on Safari. Please use Chrome or Firefox for best experience :)");
+        }
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/stylesheets/report.css" />
+
+</head>
+
+<body>
+    <div class="container my-5">
+        <div id="section1" class="section mx-auto">
+            <div class="display-3 big-heading" style="font-weight: 600;" align="center">Prisoner's Dilemma</div>
+            <div class="h1 big-heading" align="center">Survey Report</div>
+            <br />
+
+            <div class="result my-5 pb-4">
+                <div class="h3 heading">0. The case which was <span class="highlight">Similar to Original</span>.</div>
+                <div class="prompt">
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 px-4">
+                        <canvas id="chart3" class="graph" width="400" height="400"></canvas>
+                    </div>
+                    <div class="col-md-2 px-4">
+                    </div>
+                    <div class="col-md-5 px-4">
+                        <canvas id="chart4" class="graph" width="400" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result my-5 pb-4">
+                <div class="h3 heading">1. The case in which <span class="highlight">Penalties were Reduced</span>.
+                </div>
+                <div class="prompt">
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 px-4">
+                        <canvas id="chart5" class="graph" width="400" height="400"></canvas>
+                    </div>
+                    <div class="col-md-2 px-4"></div>
+                    <div class="col-md-5 px-4">
+                        <canvas id="chart6" class="graph" width="400" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result my-5 pb-4">
+                <div class="h3 heading">2. The case in which <span class="highlight">Cooperation was Favoured</span>.
+                </div>
+                <div class="prompt">
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 px-4">
+                        <canvas id="chart7" class="graph" width="400" height="400"></canvas>
+                    </div>
+                    <div class="col-md-2 px-4"></div>
+                    <div class="col-md-5 px-4">
+                        <canvas id="chart8" class="graph" width="400" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result my-5 pb-4">
+                <div class="h3 heading">3. The case in which <span class="highlight">Conflict Penalties were
+                        Unknown</span>.</div>
+                <div class="prompt">
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 px-4">
+                        <canvas id="chart9" class="graph" width="400" height="400"></canvas>
+                    </div>
+                    <div class="col-md-2 px-4"></div>
+                    <div class="col-md-5 px-4">
+                        <canvas id="chart10" class="graph" width="400" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result my-5 pb-4">
+                <div class="h3 heading">4. Comparision: Intelligent vs. Unintelligent Assumption</div>
+                <div class=" prompt">
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 px-4">
+                        <canvas id="chart1" class="graph" width="400" height="400"></canvas>
+                    </div>
+                    <div class="col-md-2 px-4"></div>
+                    <div class="col-md-5 px-4">
+                        <canvas id="chart2" class="graph" width="400" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="fixed-bottom footer px-3">
+        <a target="blank" href="https://shivanshrakesh.github.io/">@ShivanshRakesh</a>
+    </div>
+
+    <script src="/scripts/populateCharts.js"></script>
+
+    <!-- FULL SCREEN PAGES -->
+    <!-- <script src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js"></script>
+    <script> new fullpage('#fullpage'); </script> -->
+
+    <!-- BOOTSTRAP SCRIPTS -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</body>
+
+</html>

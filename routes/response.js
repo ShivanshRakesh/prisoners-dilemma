@@ -9,6 +9,49 @@ documentId = {
     3: "5f8de60bd9ffdbfb4478d637",      // punishment unknown
 }
 
+router.route('/getResponses').get((req, res) => {
+    let data = [
+        {
+            'coopWhenIntel': 0,
+            'coopWhenNotIntel': 0,
+            'betrayWhenIntel': 0,
+            'betrayWhenNotIntel': 0,
+        },
+        {
+            'coopWhenIntel': 0,
+            'coopWhenNotIntel': 0,
+            'betrayWhenIntel': 0,
+            'betrayWhenNotIntel': 0,
+        },
+        {
+            'coopWhenIntel': 0,
+            'coopWhenNotIntel': 0,
+            'betrayWhenIntel': 0,
+            'betrayWhenNotIntel': 0,
+        },
+        {
+            'coopWhenIntel': 0,
+            'coopWhenNotIntel': 0,
+            'betrayWhenIntel': 0,
+            'betrayWhenNotIntel': 0,
+        }
+    ];
+
+    for (let i = 0; i < 4; i++) {
+        Response.findById(documentId[i])
+            .then(d => {
+                data[i]['coopWhenIntel'] = d['cooperationsIntelligent'];
+                data[i]['coopWhenNotIntel'] = d['cooperationsNotIntelligent'];
+                data[i]['betrayWhenIntel'] = d['defectionsIntelligent'];
+                data[i]['betrayWhenNotIntel'] = d['defectionsNotIntelligent'];
+                if (i == 3) {
+                    res.status(200).send(data);
+                }
+            })
+            .catch(err => res.status(400).send(err));
+    }
+})
+
 router.route('/collectName').post((req, res) => {
     if (req.body.name.length > 0 && req.body.name.trim()) {
         // console.log("Adding name " + req.body.name + " to the collection...");
