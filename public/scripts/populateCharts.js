@@ -130,7 +130,7 @@ function populateCharts(resp) {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
-                        suggestedMax: 100
+                        suggestedMax: 140
                     }
                 }]
             }
@@ -169,7 +169,7 @@ function populateCharts(resp) {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
-                        suggestedMax: 100
+                        suggestedMax: 140
                     }
                 }]
             }
@@ -208,7 +208,7 @@ function populateCharts(resp) {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
-                        suggestedMax: 100
+                        suggestedMax: 140
                     }
                 }]
             }
@@ -247,7 +247,7 @@ function populateCharts(resp) {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
-                        suggestedMax: 100
+                        suggestedMax: 140
                     }
                 }]
             }
@@ -286,7 +286,7 @@ function populateCharts(resp) {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
-                        suggestedMax: 100
+                        suggestedMax: 140
                     }
                 }]
             }
@@ -325,7 +325,7 @@ function populateCharts(resp) {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
-                        suggestedMax: 100
+                        suggestedMax: 140
                     }
                 }]
             }
@@ -364,7 +364,7 @@ function populateCharts(resp) {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
-                        suggestedMax: 100
+                        suggestedMax: 140
                     }
                 }]
             }
@@ -403,7 +403,7 @@ function populateCharts(resp) {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
-                        suggestedMax: 100
+                        suggestedMax: 140
                     }
                 }]
             }
