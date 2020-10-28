@@ -30,8 +30,7 @@ body {
 	font-family: 'Courier Prime', monospace;
 	background: url('/images/bg.png') repeat;
 	font-weight: 400;
-	color: rgb(25, 25, 25);
-	color: rgb(40, 40, 40);
+	color: #282828;
 }
 
 .highlight {
