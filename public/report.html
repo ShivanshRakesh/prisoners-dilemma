@@ -12,7 +12,7 @@
             navigator.userAgent.indexOf('CriOS') == -1 &&
             navigator.userAgent.indexOf('FxiOS') == -1;
         if (isSafari) {
-            alert("You might face some issues on Safari. Please use Chrome or Firefox for best experience :)");
+            // alert("You might face some issues on Safari. Please use Chrome or Firefox for best experience :)");
         }
     </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
@@ -29,90 +29,189 @@
 </head>
 
 <body>
-    <div class="container my-5">
+    <div class="container-fluid my-5" style="width: 90%">
         <div id="section1" class="section mx-auto">
             <div class="display-3 big-heading" style="font-weight: 600;" align="center">Prisoner's Dilemma</div>
-            <div class="h1 big-heading" align="center">Survey Report</div>
+            <div class="h1 semi-heading" align="center">Survey Report</div>
             <br />
-
+            <hr>
             <div class="result my-5 pb-4">
-                <div class="h3 heading">0. The case which was <span class="highlight">Similar to Original</span>.</div>
-                <div class="prompt">
-                    <br>
+                <div class="h3 heading px-2">Introduction</div>
+                <div class="prompt px-2">
+                    <p>The Prisoner's Dilemma is a standard example of a game analyzed in game theory that shows why two
+                        completely rational individuals might not cooperate, even if it appears that it is in their best
+                        interests to do so. It was originally framed by Merrill Flood and Melvin Dresher while working
+                        at
+                        RAND in 1950. [Source: Wikipedia]</p>
+                    <p>This survey was a modified simulation of the same. It is a part of my Philosophy Project at
+                        college. This report shows the results and observations for the same.</p>
+                    <p>This survey received around 148 responses in the first week of being live. A big thank you to all
+                        the people who filled it up! :)</p>
                 </div>
+            </div>
+            <hr>
+            <div class="result my-5 pb-4">
+                <div class="h3 heading px-2">The Original Case</div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="prompt px-2">
+                            <p>In this case, the penalties were set to resemble with original Prisoner's Dilemma (which
+                                however assumes the other person to be intelligent only).</p>
+                            <p>Though, we do see get to see rather mixed opinions with only a little
+                                cooperation/betrayal margin, opposed to the original paradox, according to which number
+                                of betrayals would be a lot more than number of cooperations.</p>
+                            <p>The additional thing here is the assumption of the other person being unintelligent. We
+                                can observe a deviation in the distribution in this case. People tend to Betray when
+                                they assume that the other person is not intelligent.</p>
+                            <p>Putting it differently, we may say that people do tend to cooperate if they assume that
+                                the other person is intelligent, probably expecting for a similar action on the other
+                                end.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex align-items-center justify-content-center pb-4">
+                        <img src="/images/gray_case1.png" class="mx-auto">
+                    </div>
+                </div>
+                <br>
                 <div class="row">
                     <div class="col-md-5 px-4">
                         <canvas id="chart3" class="graph" width="400" height="400"></canvas>
                     </div>
-                    <div class="col-md-2 px-4">
-                    </div>
+                    <div class="col-md-2"><br></div>
                     <div class="col-md-5 px-4">
                         <canvas id="chart4" class="graph" width="400" height="400"></canvas>
                     </div>
                 </div>
             </div>
-
+            <hr>
             <div class="result my-5 pb-4">
-                <div class="h3 heading">1. The case in which <span class="highlight">Penalties were Reduced</span>.
+                <div class="h3 heading px-2">When Penalties were Reduced
                 </div>
-                <div class="prompt">
-                    <br>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="prompt px-2">
+                            <p>In this case, the penalties involving at least one of the two people cooperating was
+                                reduced by a great extent.</p>
+                            <p>It is very evident from the responses that people prefer cooperating in this case. This
+                                shows that people are willing to cooperate as the risk factor reduces. It is
+                                also worth noting the order in which the cases are put up. That is, people tend to
+                                cooperate in this case after they faced the original situation in which the
+                                penalties were higher.</p>
+                            <p>Also, it can be observed that the number of betrayals increases when the other person is
+                                assumed to be unintelligent. <i>More on this in the last section.</i>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex align-items-center justify-content-center pb-4">
+                        <img src="/images/gray_case2.png" class="mx-auto">
+                    </div>
                 </div>
+                <br>
                 <div class="row">
                     <div class="col-md-5 px-4">
                         <canvas id="chart5" class="graph" width="400" height="400"></canvas>
                     </div>
-                    <div class="col-md-2 px-4"></div>
+                    <div class="col-md-2"><br></div>
                     <div class="col-md-5 px-4">
                         <canvas id="chart6" class="graph" width="400" height="400"></canvas>
                     </div>
                 </div>
             </div>
 
+            <hr>
             <div class="result my-5 pb-4">
-                <div class="h3 heading">2. The case in which <span class="highlight">Cooperation was Favoured</span>.
+                <div class="h3 heading px-2">When Cooperation was Favoured
                 </div>
-                <div class="prompt">
-                    <br>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="prompt px-2">
+                            <p>In this case, mutual cooperation was favoured, by releasing all charges when both
+                                cooperate. Also, in case of a conflict, where one betrays and the other cooperates, even
+                                the one who betrays gets some punishment (in contrast to the original case where the
+                                person who betrays is set free in such a situation).</p>
+                            <p>A very good thing to note is that this simply works as expected :) There are very less
+                                betrayals compared to cooperations.</p>
+                            <p>Again, the ratio of number of betrayals to cooperations is higher in the case where the
+                                other person is assumed to be unintelligent.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex align-items-center justify-content-center pb-4">
+                        <img src="/images/gray_case3.png" class="mx-auto">
+                    </div>
                 </div>
+                <br>
                 <div class="row">
                     <div class="col-md-5 px-4">
                         <canvas id="chart7" class="graph" width="400" height="400"></canvas>
                     </div>
-                    <div class="col-md-2 px-4"></div>
+                    <div class="col-md-2"><br></div>
                     <div class="col-md-5 px-4">
                         <canvas id="chart8" class="graph" width="400" height="400"></canvas>
                     </div>
                 </div>
             </div>
 
+            <hr>
             <div class="result my-5 pb-4">
-                <div class="h3 heading">3. The case in which <span class="highlight">Conflict Penalties were
-                        Unknown</span>.</div>
-                <div class="prompt">
-                    <br>
+                <div class="h3 heading px-2">When Some Penalties were Unknown</div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="prompt px-2">
+                            <p>In this case, the punishment in cases of common respone (either both cooperate or both
+                                betray) were kept ambiguous. This case was intentionally put up in the end, in an
+                                attempt to build up a mindset that generally mutual cooperation leads to lesser
+                                punishment. In case of a conflict (one cooperates and other betrays), the one who
+                                cooperates suffers larger punishment.</p>
+                            <p>The motive here was to see whether people cooperate based on an instinct built up from
+                                the previous cases or they betray just seeing the lesser punishment (and assuming the
+                                other would cooperate).</p>
+                            <p>One interesting thing to note is that many people avoided this case since there were
+                                considerably lesser (around 20 less) responses to this case when compared to other
+                                cases.</p>
+                            <p>For the responses received, we can observe that people tend to cooperate when the other
+                                person is assumed to be intelligent. However, in the other situation, the difference
+                                between number of cooperations and betrayals decreased.</p>
+                            <p>That is, people tend to go with the instinct instead of the apparent benefit (which
+                                however involves some amount of risk in case the other betrays).</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex align-items-center justify-content-center pb-4">
+                        <img src="/images/gray_case4.png" class="mx-auto">
+                    </div>
                 </div>
+                <br>
                 <div class="row">
                     <div class="col-md-5 px-4">
                         <canvas id="chart9" class="graph" width="400" height="400"></canvas>
                     </div>
-                    <div class="col-md-2 px-4"></div>
+                    <div class="col-md-2"><br></div>
                     <div class="col-md-5 px-4">
                         <canvas id="chart10" class="graph" width="400" height="400"></canvas>
                     </div>
                 </div>
             </div>
 
+            <hr>
             <div class="result my-5 pb-4">
-                <div class="h3 heading">4. Comparision: Intelligent vs. Unintelligent Assumption</div>
-                <div class=" prompt">
-                    <br>
+                <div class="h3 heading px-2">Intelligent or Not?</div>
+                <div class="prompt px-2">
+                    <p>This is a comparision for total number cooperations or betrayals when the other person is assumed
+                        to be intelligent versus when the other person is assumed to be unintelligent, summed up over
+                        all cases.</p>
+                    <p>It can be easily observed that number of betrayals get increased by a lot when the other person
+                        is assumed to be unintelligent.</p>
+                    <p>This is an interesting point. Let's say we fix that person
+                        A betrays. We have two cases. One, A thinks that the other unintelligent person (B) would
+                        cooperate, since <i>B is not intelligent</i>, and hence A would betray for getting released.
+                        Two, A thinks that B would betray. But in this case, A should prefer to cooperate in order to
+                        get lesser penalty (unless A doesn't want a tit-for-tat). So, A won't betray.</p>
+                    <p>The question here is, do people think that one cooperates if he is not intelligent?</p>
                 </div>
+                <br>
                 <div class="row">
                     <div class="col-md-5 px-4">
                         <canvas id="chart1" class="graph" width="400" height="400"></canvas>
                     </div>
-                    <div class="col-md-2 px-4"></div>
+                    <div class="col-md-2"><br></div>
                     <div class="col-md-5 px-4">
                         <canvas id="chart2" class="graph" width="400" height="400"></canvas>
                     </div>

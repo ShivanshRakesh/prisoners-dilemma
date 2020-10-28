@@ -35,11 +35,17 @@ body {
 }
 
 .highlight {
-	color: rgb(91, 180, 253);
+	/* color: rgb(91, 180, 253); */
+	/* color: rgb(55, 165, 255); */
 	/* text-decoration: underline;
-	text-decoration-color: rgb(80, 80, 80);
-	text-decoration-thickness: 3px; */
-	/* text-decoration-style: wavy; */
+	text-decoration-color: rgba(255, 0, 0, 0.2);
+	text-decoration-thickness: 3px;
+	text-decoration-style: dotted */
+}
+
+canvas {
+	max-width: 400px;
+	margin: auto;
 }
 
 .heading {
@@ -58,7 +64,9 @@ body {
 	/* color: white; */
 }
 
-.prompt img {
+.result img {
+	max-height: 100%;
+	max-width: 100%;
 	margin-top: auto;
 	margin-bottom: auto;
 	border-radius: 5px;
@@ -97,9 +105,10 @@ body {
 }
 
 @media (max-width: 543px) {  
-	.big-heading { font-size: 1.25rem; }
+	.big-heading { font-size: 3rem; }
+	.semi-heading { font-size: 2rem; }
 	/* .section { max-width: 95%;} */
-	.heading { font-size: 1.1rem; }
+	/* .heading { font-size: 1.3rem;} */
 	.prompt {font-size: 1rem; margin-bottom: 20px;}
 }
 
