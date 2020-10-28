@@ -28,12 +28,12 @@ function populateCharts(resp) {
                 label: '',
                 data: [totalCoopWhenIntel, totalBetrayWhenIntel],
                 backgroundColor: [
-                    'rgba(75, 192, 192, 0.9)',
-                    'rgba(255, 99, 132, 0.9)',
+                    'rgba(20, 20, 20, 0.9)',
+                    'rgba(160, 160, 160, 0.9)',
                 ],
                 borderColor: [
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(255, 99, 132, 1)',
+                    'rgba(20, 20, 20, 1)',
+                    'rgba(160, 160, 160, 1)',
                 ],
                 borderWidth: 1,
             }]
@@ -67,12 +67,12 @@ function populateCharts(resp) {
                 label: '',
                 data: [totalCoopWhenNotIntel, totalBetrayWhenNotIntel],
                 backgroundColor: [
-                    'rgba(75, 192, 192, 0.9)',
-                    'rgba(255, 99, 132, 0.9)',
+                    'rgba(20, 20, 20, 0.9)',
+                    'rgba(160, 160, 160, 0.9)',
                 ],
                 borderColor: [
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(255, 99, 132, 1)',
+                    'rgba(20, 20, 20, 1)',
+                    'rgba(160, 160, 160, 1)',
                 ],
                 borderWidth: 1,
             }]
@@ -106,12 +106,12 @@ function populateCharts(resp) {
                 label: '',
                 data: [resp[0]['coopWhenIntel'], resp[0]['betrayWhenIntel']],
                 backgroundColor: [
-                    'rgba(75, 192, 192, 0.9)',
-                    'rgba(255, 99, 132, 0.9)',
+                    'rgba(20, 20, 20, 0.9)',
+                    'rgba(160, 160, 160, 0.9)',
                 ],
                 borderColor: [
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(255, 99, 132, 1)',
+                    'rgba(20, 20, 20, 1)',
+                    'rgba(160, 160, 160, 1)',
                 ],
                 borderWidth: 1,
             }]
@@ -145,12 +145,12 @@ function populateCharts(resp) {
                 label: '',
                 data: [resp[0]['coopWhenNotIntel'], resp[0]['betrayWhenNotIntel']],
                 backgroundColor: [
-                    'rgba(75, 192, 192, 0.9)',
-                    'rgba(255, 99, 132, 0.9)',
+                    'rgba(20, 20, 20, 0.9)',
+                    'rgba(160, 160, 160, 0.9)',
                 ],
                 borderColor: [
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(255, 99, 132, 1)',
+                    'rgba(20, 20, 20, 1)',
+                    'rgba(160, 160, 160, 1)',
                 ],
                 borderWidth: 1,
             }]
@@ -184,12 +184,12 @@ function populateCharts(resp) {
                 label: '',
                 data: [resp[1]['coopWhenIntel'], resp[1]['betrayWhenIntel']],
                 backgroundColor: [
-                    'rgba(75, 192, 192, 0.9)',
-                    'rgba(255, 99, 132, 0.9)',
+                    'rgba(20, 20, 20, 0.9)',
+                    'rgba(160, 160, 160, 0.9)',
                 ],
                 borderColor: [
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(255, 99, 132, 1)',
+                    'rgba(20, 20, 20, 1)',
+                    'rgba(160, 160, 160, 1)',
                 ],
                 borderWidth: 1,
             }]
@@ -223,12 +223,12 @@ function populateCharts(resp) {
                 label: '',
                 data: [resp[1]['coopWhenNotIntel'], resp[1]['betrayWhenNotIntel']],
                 backgroundColor: [
-                    'rgba(75, 192, 192, 0.9)',
-                    'rgba(255, 99, 132, 0.9)',
+                    'rgba(20, 20, 20, 0.9)',
+                    'rgba(160, 160, 160, 0.9)',
                 ],
                 borderColor: [
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(255, 99, 132, 1)',
+                    'rgba(20, 20, 20, 1)',
+                    'rgba(160, 160, 160, 1)',
                 ],
                 borderWidth: 1,
             }]
@@ -262,12 +262,12 @@ function populateCharts(resp) {
                 label: '',
                 data: [resp[2]['coopWhenIntel'], resp[2]['betrayWhenIntel']],
                 backgroundColor: [
-                    'rgba(75, 192, 192, 0.9)',
-                    'rgba(255, 99, 132, 0.9)',
+                    'rgba(20, 20, 20, 0.9)',
+                    'rgba(160, 160, 160, 0.9)',
                 ],
                 borderColor: [
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(255, 99, 132, 1)',
+                    'rgba(20, 20, 20, 1)',
+                    'rgba(160, 160, 160, 1)',
                 ],
                 borderWidth: 1,
             }]
@@ -301,12 +301,12 @@ function populateCharts(resp) {
                 label: '',
                 data: [resp[2]['coopWhenNotIntel'], resp[2]['betrayWhenNotIntel']],
                 backgroundColor: [
-                    'rgba(75, 192, 192, 0.9)',
-                    'rgba(255, 99, 132, 0.9)',
+                    'rgba(20, 20, 20, 0.9)',
+                    'rgba(160, 160, 160, 0.9)',
                 ],
                 borderColor: [
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(255, 99, 132, 1)',
+                    'rgba(20, 20, 20, 1)',
+                    'rgba(160, 160, 160, 1)',
                 ],
                 borderWidth: 1,
             }]
@@ -340,12 +340,12 @@ function populateCharts(resp) {
                 label: '',
                 data: [resp[3]['coopWhenIntel'], resp[3]['betrayWhenIntel']],
                 backgroundColor: [
-                    'rgba(75, 192, 192, 0.9)',
-                    'rgba(255, 99, 132, 0.9)',
+                    'rgba(20, 20, 20, 0.9)',
+                    'rgba(160, 160, 160, 0.9)',
                 ],
                 borderColor: [
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(255, 99, 132, 1)',
+                    'rgba(20, 20, 20, 1)',
+                    'rgba(160, 160, 160, 1)',
                 ],
                 borderWidth: 1,
             }]
@@ -379,12 +379,12 @@ function populateCharts(resp) {
                 label: '',
                 data: [resp[3]['coopWhenNotIntel'], resp[3]['betrayWhenNotIntel']],
                 backgroundColor: [
-                    'rgba(75, 192, 192, 0.9)',
-                    'rgba(255, 99, 132, 0.9)',
+                    'rgba(20, 20, 20, 0.9)',
+                    'rgba(160, 160, 160, 0.9)',
                 ],
                 borderColor: [
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(255, 99, 132, 1)',
+                    'rgba(20, 20, 20, 1)',
+                    'rgba(160, 160, 160, 1)',
                 ],
                 borderWidth: 1,
             }]

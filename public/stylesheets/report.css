@@ -112,6 +112,14 @@ canvas {
 	.prompt {font-size: 1rem; margin-bottom: 20px;}
 }
 
+@media (max-width: 400px) {  
+	.big-heading { font-size: 2.4rem; }
+	.semi-heading { font-size: 1.8rem; }
+	/* .section { max-width: 95%;} */
+	.heading { font-size: 1.4rem;}
+	.prompt {font-size: 1rem; margin-bottom: 20px;}
+}
+
 @media (min-width: 544px) { 
 	/* .section { max-width: 90%; } */
 }
